@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>WORD COUNTER::ABOUT</title>
+
+     <!-- 합쳐지고 최소화된 최신 CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+     <!-- 부가적인 테마 -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+
+     <style>
+        body{
+            background-color:cornflowerblue;
+            font-family: 'Black Han Sans', sans-serif;
+        }
+        .side{
+            height:100%;
+            width:200px;
+            position:fixed;
+            z-index:1;
+            top: 0;
+            left:0;
+            background-color:whitesmoke;
+            overflow-x:hidden;
+            padding-top: 20px;
+        }
+        .side a{
+            padding:10px 8px 6px 20px;
+            font-size: 20px;
+            color:grey;
+            display: block;
+        }
+        .side a:hover {
+            color: cornflowerblue;
+        }
+        .main{
+            margin-left:200px;
+            padding: 0px 10px;
+        }
+        p{
+            color:white;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 50px;
+            margin-top:20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="side">
+        <a href="{%url 'home' %}">HOME</a>
+        <a href="#">ABOUT</a>
+    </div>
+
+    <div class="main">
+        <p>
+            멋쟁이 사자처럼 7기 강나래입니다.<br>
+            그냥 만들어 보았어요!
+        </p>
+    </div>
+    
+    
+</body>
+</html>

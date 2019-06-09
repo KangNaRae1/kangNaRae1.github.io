@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>WORD COUNTER::RESULT</title>
+
+     <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+
+    <style>
+        body{
+            background-color:cornflowerblue;
+            font-family: 'Black Han Sans', sans-serif;
+        }
+        .side{
+            height:100%;
+            width:200px;
+            position:fixed;
+            z-index:1;
+            top: 0;
+            left:0;
+            background-color:whitesmoke;
+            overflow-x:hidden;
+            padding-top: 20px;
+        }
+        .side a{
+            padding:10px 8px 6px 20px;
+            font-size: 20px;
+            color:grey;
+            display: block;
+        }
+        .side a:hover {
+            color: cornflowerblue;
+        }
+        .main{
+            margin-left:200px;
+            padding: 0px 10px;
+        }
+        .result{
+            color: white;
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="side">
+        <a href="{%url 'home' %}">HOME</a>
+        <a href="{%url 'about' %}">ABOUT</a>
+        <a href="#">RESULT</a>
+    </div>
+    <div class="main">
+        <div class="result">
+        <h1>당신이 입력한 텍스트는 <span style="color:tomato">{{total}}단어</span>로 구성되어 있습니다.</h1>
+        <br>
+        <h1>입력한 텍스트:</h1>
+        <h3>{{text}}</h3>
+        <br>
+        <h1>단어 카운트: </h1>
+        <h3>
+            {% for word, count in dictionary %}
+            {{word}}->{{count}}개<br>
+            {% endfor %}
+        </h3>
+        </div>
+    </div>
+</body>
+</html>
